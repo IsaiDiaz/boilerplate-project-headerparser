@@ -21,7 +21,7 @@ app.get("/", function (req, res) {
 
 
 // your first API endpoint... 
-app.get("/api/:header", function (req, res) {
+app.get("/api/whoami", function (req, res) {
   let header = req.headers;
   var r = require('ua-parser').parse(req.headers['user-agent']);
   res.json({ipaddress: req.ip, language: header['accept-language'], software: r.ua.toString()});
